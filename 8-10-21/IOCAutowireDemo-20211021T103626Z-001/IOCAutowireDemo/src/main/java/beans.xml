@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="address" class="org.torryharris.Address"/>
+
+    <bean id="account" class="org.torryharris.Account"/>
+
+
+    <!-- no, byName, byType, constructor -->
+    <bean id="customer" class="org.torryharris.Customer" scope="prototype"  autowire="constructor">
+
+      <!-- ( name= is  of the instance  variable name  ref = is bean ref)-->
+        <!--<property name="address" ref="addrs"/>
+        <property name="account" ref="account"/>-->
+        <!--<constructor-arg ref="address"/>
+        <constructor-arg ref="account"/>-->
+
+    </bean>
+
+
+
+</beans>
